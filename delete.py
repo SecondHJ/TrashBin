@@ -6,7 +6,7 @@ from os import popen, path, mkdir
 # create ~/trash dir if not exist
 userHomePath = '/home/' + getpass.getuser()
 hasTrash = path.exists(userHomePath + "/trash")
-print hasTrash
+hasTrash
 if not hasTrash:
     username = getpass.getuser()
     mkdir(userHomePath + "/trash")
@@ -16,7 +16,7 @@ params = argv
 for index in range(1, len(params)):
     param = params[index]
     # move file to ~/trash
-    print popen("mv " + param + " " + userHomePath + "/trash")
+    popen("mv " + param + " " + userHomePath + "/trash")
 
 
 
