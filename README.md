@@ -1,1 +1,1 @@
-###Python实现Linux回收站功能
+### Python实现Linux回收站功能
