@@ -1,4 +1,5 @@
 #!/bin/bash
 # install del
 cp delete.py /usr/local/lib
-echo python /usr/local/lib/delete.py >> /usr/local/bin/del
+cp lib/del >> /usr/local/bin && chmod +x /usr/local/bin/del
+

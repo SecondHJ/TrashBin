@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Are you sure delete this? (yes/no)" confirm
+
+if [confirm == "yes" || $confirm == "y"]
+then
+    echo "1"
+fi
