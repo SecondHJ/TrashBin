@@ -1,5 +1,5 @@
-## Python实现Linux回收站功能
-#### 安装
+## 实现Linux回收站功能
+#### install
     ./install.sh
-#### 使用
+#### use
     del filename
