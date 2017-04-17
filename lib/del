@@ -2,7 +2,14 @@
 
 read -p "Are you sure delete this? (yes/no)" confirm
 
-if [confirm == "yes" || $confirm == "y"]
+# make trash dir
+if [ ! -d ~/trash ]
 then
-    echo "1"
+    mkdir ~/trash
+fi
+
+# move to ~/trash dir
+if [ "$confirm" == 'yes' -o "$confirm" == 'y' ]
+then
+    mv $@ ~/trash
 fi
