@@ -11,5 +11,7 @@ fi
 # move to ~/trash dir
 if [ "$confirm" == 'yes' -o "$confirm" == 'y' ]
 then
-    mv $@ ~/trash
+    dt=$(date +%Y%m%d_%H%M%S)
+    mkdir ~/trash/"$dt" && mv -i $@ ~/trash/"$dt"/
+    exit 0
 fi
