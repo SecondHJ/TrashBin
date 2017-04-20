@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Are you sure delete this? (yes/no)" confirm
+read -p "Are you sure delete this? (Y/N)" confirm
 
 # make trash dir
 if [ ! -d ~/trash ]
@@ -9,9 +9,13 @@ then
 fi
 
 # move to ~/trash dir
-if [ "$confirm" == 'yes' -o "$confirm" == 'y' ]
+if [ "$confirm" == 'Y' -o "$confirm" == 'y' ]
 then
-    dt=$(date +%Y%m%d_%H%M%S)
-    mkdir ~/trash/"$dt" && mv -i $@ ~/trash/"$dt"/
+    while [ $# != 0 ]
+        do
+            dt=$(date +%Y%m%d_%H%M%S)
+            mv -i $1 ~/trash/"$1"_"$dt"
+            shift
+        done
     exit 0
 fi
