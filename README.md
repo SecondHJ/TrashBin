@@ -4,6 +4,8 @@
     sudo ./install.sh
 #### use
     del filename
+#### check
+    ls ~/trash  
     
 #### TODO:
 - 定时清理
