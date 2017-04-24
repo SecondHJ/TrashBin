@@ -9,6 +9,6 @@ else
 fi
 
 # cron
-echoc "  0  0  *  *  * $(whoami)  rm -rf ~/trash/*"
+echo "  0  0  *  *  * $(whoami)  rm -rf ~/trash/*"  >> /etc/crontab
 
 
