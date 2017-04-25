@@ -13,8 +13,13 @@ if [ "$confirm" == 'Y' -o "$confirm" == 'y' ]
 then
     while [ $# != 0 ]
         do
+            # cut filepath
+	    cut=${1%/}
+            cut=${cut##*/}
+            # gen time
             dt=$(date +%Y%m%d_%H%M%S)
-            mv -i $1 ~/trash/"$1"_"$dt"
+	    # move to trash
+            mv -i $1 ~/trash/"$cut"_"$dt"
             shift
         done
     exit 0
