@@ -7,7 +7,10 @@ To avoid executing command like "rm -rf /\*", "rm -rf ~" , this script will crea
     del filename
 #### check
     ls ~/trash  
-    
+
+#### option
+- -y:   delete without remind
+
 #### TODO:
 - 容量限制
 - 恢复已删除命令
