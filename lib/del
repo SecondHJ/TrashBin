@@ -1,6 +1,16 @@
 #!/bin/bash
 
-read -p "Are you sure delete this? (Y/N)" confirm
+# handle option
+getopts ":y" opt
+case $opt in
+    y)
+        confirm='y'
+        shift
+        ;;
+    ?)
+        read -p "Are you sure delete this? (Y/N)" confirm
+        ;;
+esac
 
 # make trash dir
 if [ ! -d ~/trash ]
